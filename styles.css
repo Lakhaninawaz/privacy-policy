@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: #d8795e;
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  main > section:first-child > div {
+    animation: arrive 700ms ease-out both;
+  }
+
+  article > section {
+    animation: arrive 600ms ease-out both;
+  }
+}
+
+@keyframes arrive {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
